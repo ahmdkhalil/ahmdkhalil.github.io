@@ -86,7 +86,7 @@
     <div id="container">
         <div class="heart">❤️</div>
         <div id="content">
-            <h1>Cawaman</h1>
+            <img src="baby_us.jpg" style="width:100%; border-radius:10px;">
             <h1>Will you be my Valentine?</h1>
             <p>To the most beautiful woman I know... <br> I promise to love you more every single day.</p>
             
