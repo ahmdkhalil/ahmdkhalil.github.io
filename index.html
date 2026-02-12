@@ -182,23 +182,35 @@
                 setTimeout(createHeart, i * 50);
             }
         }
-
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('falling-heart');
-            heart.innerHTML = ['❤️', '💖', '✨', '💕', '🌸'][Math.floor(Math.random() * 5)];
+            
+            // Expanded Emoji List
+            const heartTypes = ['❤️', '💖', '✨', '💕', '🌸', '💘', '💝', '💗', '💓', '💌', '🌹', '💎'];
+            heart.innerHTML = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+            
             heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.top = '-20px';
-            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
-            heart.style.transition = `transform ${Math.random() * 3 + 2}s linear`;
+            heart.style.top = '-50px';
+            heart.style.fontSize = (Math.random() * 25 + 15) + 'px';
+            
+            // Randomize fall speed
+            const duration = Math.random() * 3 + 3; 
+            heart.style.transition = `top ${duration}s linear, left 2s ease-in-out`;
             
             document.body.appendChild(heart);
 
+            // Trigger the fall
             setTimeout(() => {
-                heart.style.transform = `translateY(${window.innerHeight + 50}px) rotate(${Math.random() * 360}deg)`;
+                heart.style.top = (window.innerHeight + 50) + 'px';
+                // Add a little side-to-side sway
+                heart.style.left = (parseFloat(heart.style.left) + (Math.random() * 20 - 10)) + 'vw';
             }, 50);
 
-            setTimeout(() => { heart.remove(); }, 5000);
+            // Remove heart after it leaves screen
+            setTimeout(() => {
+                heart.remove();
+            }, duration * 1000);
         }
     </script>
 </body>
