@@ -87,7 +87,7 @@
         <div class="heart">❤️</div>
         <div id="content">
             <img src="baby_us.jpg" 
-             alt="Our Memory" 
+             alt="Us as Baby" 
              style="width:100%; max-height: 300px; object-fit: cover; border-radius:15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
             <h1>Will you be my Valentine?</h1>
             <p>To the most beautiful woman I know... <br> I promise to love you more every single day.</p>
